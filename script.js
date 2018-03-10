@@ -39,8 +39,12 @@ var alienBulletY;
  * select(), and adds event listeners to those elements. Sets initial values of
  * variables by calling resetGame().
  */
-
-
+ function setup() {
+   canvas = createCanvas(500, 400);
+   background(0,0,0);
+   gameScreen = select("#game-screen");
+   canvas.parent(gameScreen);
+}
 /*
  * gameOver()
  * This function stops the game from running and shows an alert telling the
